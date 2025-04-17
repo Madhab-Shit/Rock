@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[80%] h-[50vh] md:w-[20%] md:h-[50vh] bg-[#F0F0F0] ml-[auto] mr-[auto] mt-[10%] px-[1.5%] pt-[1%] rounded-[20px]">
+        <h1 class="text-3xl underline md:text-3xl text-[#11e0e0] text-center mt-[5%]">Rock Paper Scissor</h1>
+       <div class="flex justify-evenly">
+        <div class="w-[25%] h-[8vh] text-center mt-[8%] p-[2%] rounded-[10px] border-[2px] border-[#000] md:w-[30%]" id="rock"><p class="mt-[20%] md:mt-[15%]" id="you">You</p></div>
+        <div class="w-[30%] h-[8vh] text-center mt-[8%] pt-[5%] rounded-[10px]  text-2xl">VS</div>
+        <div class="w-[25%] h-[8vh] text-center mt-[8%] rounded-[10px] border-[2px] border-[#000] md:w-[30%] " id="comp"><p class="mt-[20%]" id="co">Computer</p></div>
+       </div>
+        <input type="text" class="w-[100%] mt-[8%] rounded-[10px] h-[6vh] bg-[#ffffff] text-center text-2xl" id="inp">
+        <div class="flex justify-evenly mt-[8%] w-[100%]  bg-green-00">
+           <div class="w-[30%] bg-[#CCCCCC] h-[6vh] text-center rounded-[10px] pt-[2%] text-[20px] text-[#00000090] cursor-pointer" onclick="roc()">Rock</div>
+           <div class="w-[30%] bg-[#CCCCCC] h-[6vh] text-center rounded-[10px] pt-[2%] text-[20px] text-[#00000090] cursor-pointer" onclick="pap()">Paper</div>
+           <div class="w-[30%] bg-[#CCCCCC] h-[6vh] text-center rounded-[10px] pt-[2%] text-[20px] text-[#00000090] cursor-pointer" onclick="sci()">Scissor</div>
+        </div>
+        <button class="w-[30%] h-[6vh] bg-green-500 mt-[8%] ml-[auto] block mr-[auto] rounded-[10px] text-white text-2xl" onclick="reset()">Reset</button>
+    </div>
+    <script>
+        function roc()
+        {
+            document.getElementById('rock').style.backgroundImage="url(img/1.png)";
+            document.getElementById('rock').style.backgroundSize="98% 100%";
+            document.getElementById('you').innerHTML="";
+            var a=0;
+            let b= Math.floor(Math.random(1-3)*3);
+            console.log(b);
+            if(b==0)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/1.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==1)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/2.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==2)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/3.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            if(a==b)
+            {
+                document.getElementById('inp').value="BOTH ARE EQUAL";
+            }
+            else if(b==1)
+            {
+                document.getElementById('inp').value="COMPUTER WIN";
+            }
+            else if(b==2)
+            {
+                document.getElementById('inp').value="YOU WIN";
+            }
+        }
+        function pap()
+        {
+            document.getElementById('rock').style.backgroundImage="url(img/2.png)";
+            document.getElementById('rock').style.backgroundSize="98% 100%";
+            document.getElementById('you').innerHTML="";
+            let a=1;
+            let b= Math.floor(Math.random(1-3)*3);
+            console.log(b);
+            if(b==0)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/1.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==1)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/2.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==2)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/3.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            if(a==b)
+            {
+                document.getElementById('inp').value="BOTH ARE EQUAL";
+            }
+            else if(b<1)
+            {
+                document.getElementById('inp').value="YOU WIN";
+            }
+            else if(b>1)
+            {
+                document.getElementById('inp').value="COMPUTER WIN";
+            }
+        }
+        function sci()
+        {
+            document.getElementById('rock').style.backgroundImage="url(img/3.png)";
+            document.getElementById('rock').style.backgroundSize="98% 100%";
+            document.getElementById('you').innerHTML="";
+            let a=2;
+            let b= Math.floor(Math.random(1-3)*3);
+            console.log(b);
+            if(b==0)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/1.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==1)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/2.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            else if(b==2)
+            {
+            document.getElementById('comp').style.backgroundImage="url(img/3.png)";
+            document.getElementById('comp').style.backgroundSize="98% 100%";
+            document.getElementById('co').innerHTML="";
+            }
+            if(a==b)
+            {
+                document.getElementById('inp').value="BOTH ARE EQUAL";
+            }
+            else if(b==1)
+            {
+                document.getElementById('inp').value="YOU WIN";
+            }
+            else if(b==0)
+            {
+                document.getElementById('inp').value="COMPUTER WIN";
+            }
+        }
+        function reset()
+        {
+            document.getElementById('rock').style.backgroundImage="";
+            document.getElementById('you').innerHTML="You";
+            document.getElementById('comp').style.backgroundImage="";
+            document.getElementById('co').innerHTML="Computer";
+            document.getElementById('inp').value="";
+        }
+    </script>
+</body>
+</html>
