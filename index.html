@@ -23,8 +23,10 @@
         <button class="w-[30%] h-[6vh] bg-green-500 mt-[8%] ml-[auto] block mr-[auto] rounded-[10px] text-white text-2xl" onclick="reset()">Reset</button>
     </div>
     <script>
+        var c=1;
         function roc()
         {
+            if(c==1){
             document.getElementById('rock').style.backgroundImage="url(img/1.png)";
             document.getElementById('rock').style.backgroundSize="98% 100%";
             document.getElementById('you').innerHTML="";
@@ -61,9 +63,12 @@
             {
                 document.getElementById('inp').value="YOU WIN";
             }
+            c=c+1;
+            }
         }
         function pap()
         {
+            if(c==1){   
             document.getElementById('rock').style.backgroundImage="url(img/2.png)";
             document.getElementById('rock').style.backgroundSize="98% 100%";
             document.getElementById('you').innerHTML="";
@@ -100,9 +105,12 @@
             {
                 document.getElementById('inp').value="COMPUTER WIN";
             }
+            c=c+1;
+             }
         }
         function sci()
         {
+            if(c==1){
             document.getElementById('rock').style.backgroundImage="url(img/3.png)";
             document.getElementById('rock').style.backgroundSize="98% 100%";
             document.getElementById('you').innerHTML="";
@@ -139,6 +147,8 @@
             {
                 document.getElementById('inp').value="COMPUTER WIN";
             }
+            c=c+1;
+             }
         }
         function reset()
         {
@@ -147,6 +157,7 @@
             document.getElementById('comp').style.backgroundImage="";
             document.getElementById('co').innerHTML="Computer";
             document.getElementById('inp').value="";
+            c=c-1;
         }
     </script>
 </body>
